@@ -30,3 +30,4 @@ resource "ibm_is_instance" "webappserver-zone1" {
 #  keys      = ["${ibm_is_ssh_key.sshkey.id}"]
 #  user_data = "${data.template_cloudinit_config.cloud-init-webapptier.rendered}"
 }
+
