@@ -1,11 +1,6 @@
 #---------------------------------------------------------
 # Create sshkey from file
 #---------------------------------------------------------
-# resource "ibm_is_ssh_key" "sshkey" {
-#  name       = "wordpress-demo"
-#  public_key = "${file(var.ssh_public_key)}"
-# }
-
 data "ibm_is_ssh_key" "sshkey" {
   name = "${var.ssh_keyname}"
 }
@@ -27,7 +22,14 @@ resource "ibm_is_instance" "webappserver-zone1" {
   vpc       = "${ibm_is_vpc.vpc1.id}"
   zone      = "${var.zone1}"
   keys      = ["${data.ibm_is_ssh_key.sshkey.id}"]
-#  keys      = ["${ibm_is_ssh_key.sshkey.id}"]
-#  user_data = "${data.template_cloudinit_config.cloud-init-webapptier.rendered}"
 }
+#---------------------------------------------------------
+# Assign floating IPs if needed
+#---------------------------------------------------------
 
+# Assign floating IP's to instance of Web Servers
+resource "ibm_is_floating_ip" "webappserver-zone1-fip" {
+  count     = "${ibm_is_instance.webappserver-zone1.count}"
+  name    = "${var.webappserver-name}-${var.zone1}-fip"
+  target  = "${element(ibm_is_instance.webappserver-zone1.*.primary_network_interface.0.id, count.index)}"
+}
