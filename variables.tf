@@ -54,11 +54,8 @@ variable "webapptier-subnet-zone-1" {
 ## DEFINE sshkey to be used for compute instances
 #---------------------------------------------------------
 variable "ssh_keyname" {
-  default="joachim-ssh"
+  default="XXXXXXX"
 }
-# variable "ssh_public_key" {
-#  default = "~/.ssh/id_rsa.pub"
-# }
 
 #---------------------------------------------------------
 ## DEFINE OS image to be used for compute instances
