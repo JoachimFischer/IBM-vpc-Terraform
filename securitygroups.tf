@@ -10,7 +10,7 @@ resource "ibm_is_security_group_rule" "webapptier-securitygroup-rule1" {
   group      = "${ibm_is_security_group.webapptier-securitygroup.id}"
   direction  = "ingress"
   ip_version = "ipv4"
-  remote     = "${var.webapptier-subnet-zone-1}"
+  remote     = "0.0.0.0/0"
 }
 
 
