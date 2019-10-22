@@ -8,7 +8,7 @@ resource "ibm_is_security_group" "webapptier-securitygroup" {
 
 resource "ibm_is_security_group_rule" "webapptier-securitygroup-rule1" {
   group      = "${ibm_is_security_group.webapptier-securitygroup.id}"
-  direction  = "ingress"
+  direction  = "inbound"
   ip_version = "ipv4"
   remote     = "0.0.0.0/0"
 }
@@ -16,7 +16,7 @@ resource "ibm_is_security_group_rule" "webapptier-securitygroup-rule1" {
 
 resource "ibm_is_security_group_rule" "webapptier-securitygroup-rule2" {
   group      = "${ibm_is_security_group.webapptier-securitygroup.id}"
-  direction  = "egress"
+  direction  = "outbound"
   ip_version = "ipv4"
   remote     = "0.0.0.0/0"
 }
