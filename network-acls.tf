@@ -7,14 +7,14 @@ resource "ibm_is_network_acl" "default_all_acl" {
       action      = "allow"
       source      = "0.0.0.0/0"
       destination = "0.0.0.0/0"
-      direction   = "ingress"
+      direction   = "inbound"
     },
     {
       name        = "${var.vpc-name}-default-allow-all-egress"
       action      = "allow"
       source      = "0.0.0.0/0"
       destination = "0.0.0.0/0"
-      direction   = "egress"
+      direction   = "outbound"
     },
   ]
 }
