@@ -40,10 +40,10 @@ resource "ibm_is_public_gateway" "pubgw-zone1" {
 #---------------------------------------------------------
 ## Create Webapp Subnets in Zone1
 #---------------------------------------------------------
-resource "ibm_is_subnet" "webapptier-subnet-zone1" {
-  name            = "${var.vpc-name}-${var.zone1}-webapptier"
+resource "ibm_is_subnet" "server-subnet-zone1" {
+  name            = "${var.vpc-name}-${var.zone1}-server"
   vpc             = "${ibm_is_vpc.vpc1.id}"
   zone            = "${var.zone1}"
-  ipv4_cidr_block = "${var.webapptier-subnet-zone-1}"
+  ipv4_cidr_block = "${var.server-subnet-zone-1}"
   public_gateway  = "${ibm_is_public_gateway.pubgw-zone1.id}"
 }
