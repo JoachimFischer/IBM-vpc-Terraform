@@ -1,6 +1,6 @@
 # IBM-vpc-Terraform
 
-using IBM Cloud (cloud.ibm.com) with Infrastructure as Code (IaC) based on Terraform for Virtual Private Clouds (VPCs)
+Using IBM Cloud (cloud.ibm.com) with Infrastructure as Code (IaC) based on Terraform for Virtual Private Clouds (VPCs)
 
 
 ## Pre-requisit:
@@ -9,7 +9,7 @@ using IBM Cloud (cloud.ibm.com) with Infrastructure as Code (IaC) based on Terra
 3. [define your ssh key for VPC infrastrucre:](https://cloud.ibm.com/vpc/compute/sshKeys/) like: user-ssh
 4. [define an IBM Cloud API key:](https://cloud.ibm.com/iam/apikeys/)
 
-Using the IBM Schematics service, it is not necessary to install Terraform, CLI on you local mashine. A workspace can be added in Schematics with direct connection to GitHuB to access the Terrform definition.
+Using the **IBM Schematics** service, it is not necessary to install Terraform, CLI on you local mashine. You can use it integrate in IBM Cloud Web GUI. A workspace can be added in Schematics with direct connection to GitHuB to access the Terrform definition.
 
 If you have logon into IBM Cloud Account, switch to Schematics and define your Workspace. Therfore you have define the Workspace name, use your Resource group and add the GitHub URL like https://github.com/JoachimFischer/IBM-vpc-Terraform
 
