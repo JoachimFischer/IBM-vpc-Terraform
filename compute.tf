@@ -8,15 +8,15 @@ data "ibm_is_ssh_key" "sshkey" {
 #---------------------------------------------------------
 # Create instances in each subnet in zone1
 #---------------------------------------------------------
-resource "ibm_is_instance" "webappserver-zone1" {
-  count   = "${var.webappserver-count}"
-  name    = "${var.webappserver-name}-${var.zone1}"
+resource "ibm_is_instance" "server-zone1" {
+  count   = "${var.server-count}"
+  name    = "${var.server-name}-${var.zone1}"
   image   = "${var.image}"
   profile = "${var.profile-server}"
 
   primary_network_interface = {
-    subnet          = "${ibm_is_subnet.webapptier-subnet-zone1.id}"
-    security_groups = ["${ibm_is_security_group.webapptier-securitygroup.id}"]
+    subnet          = "${ibm_is_subnet.server-subnet-zone1.id}"
+    security_groups = ["${ibm_is_security_group.server-securitygroup.id}"]
   }
 
   vpc       = "${ibm_is_vpc.vpc1.id}"
@@ -28,8 +28,8 @@ resource "ibm_is_instance" "webappserver-zone1" {
 #---------------------------------------------------------
 
 # Assign floating IP's to instance of Web Servers
-resource "ibm_is_floating_ip" "webappserver-zone1-fip" {
-  count     = "${ibm_is_instance.webappserver-zone1.count}"
-  name    = "${var.webappserver-name}-${var.zone1}-fip"
-  target  = "${element(ibm_is_instance.webappserver-zone1.*.primary_network_interface.0.id, count.index)}"
+resource "ibm_is_floating_ip" "server-zone1-fip" {
+  count     = "${ibm_is_instance.server-zone1.count}"
+  name    = "${var.server-name}-${var.zone1}-fip"
+  target  = "${element(ibm_is_instance.server-zone1.*.primary_network_interface.0.id, count.index)}"
 }
