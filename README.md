@@ -11,6 +11,12 @@ using IBM Cloud (cloud.ibm.com) with Infrastructure as Code (IaC) based on Terra
 
 Using the IBM Schematics service, it is not necessary to install Terraform, CLI on you local mashine. A workspace can be added in Schematics with direct connection to GitHuB to access the Terrform definition.
 
+If you have logon into IBM Cloud Account, switch to Schematics and define your Workspace. Therfore you have define the Workspace name, use your Resource group and add the GitHub URL like https://github.com/JoachimFischer/IBM-vpc-Terraform
+
+How push the button "Retrieve input variables" to add your API key and the stored SSH name. Now you can creat teh workspace. The following activities are the same as use the Terraform function in command line editor. At first push the button "Generate plan". If this is finalized with no error you can "Apply plan". In this step the installation of the ressources are realized. During the activities you can follow the log view.
+
+With the following IBM-vpc-Terraform example, you can deploy following architecture:
+
 
 ## Additional Documentation Provided with Useful links for Terraform and IBM CLoud 
 - [Terraform Documentation](https://www.terraform.io/docs/index.html)
