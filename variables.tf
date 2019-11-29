@@ -41,24 +41,35 @@ variable "zone1" {
   default = "eu-de-1"
 }
 
+# for Frankfurt04 data center
+variable "zone2" {
+  default = "eu-de-2"
+}
+
+# for Frankfurt05 data center
+variable "zone3" {
+  default = "eu-de-3"
+}
+
 
 #---------------------------------------------------------
-## DEFINE CIDR Blocks to be used in each zone
+## DEFINE CIDR Blocks to be used 
 #---------------------------------------------------------
-#variable "address-prefix-vpc" {
-#  default = "172.21.0.0/20"
-#}
-
 variable "address-prefix-1" {
   default = "172.21.0.0/21"
 }
 
 #---------------------------------------------------------
-## DEFINE subnets for server in zone 1
+## DEFINE subnets for server in each zone
 #---------------------------------------------------------
-
 variable "server-subnet-zone-1" {
   default = "172.21.0.0/24"
+}
+variable "server-subnet-zone-2" {
+  default = "172.21.3.0/24"
+}
+variable "server-subnet-zone-3" {
+  default = "172.21.6.0/24"
 }
 
 #---------------------------------------------------------
