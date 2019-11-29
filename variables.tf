@@ -11,6 +11,11 @@ variable "ibmcloud_vpc_generation" {
   default = "1"
 }
 
+# cloud region
+variable "ibmcloud_region" {
+  default = "eu-de"
+}
+
 variable "ibmcloud_timeout" {
    default = 300
 }
@@ -31,6 +36,7 @@ variable "resource_group" {
 #---------------------------------------------------------
 ## DEFINE Zones
 #---------------------------------------------------------
+# for Frankfurt02 data center
 variable "zone1" {
   default = "eu-de-1"
 }
