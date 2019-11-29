@@ -16,6 +16,13 @@ If you have logon into IBM Cloud Account, switch to Schematics and define your W
 How push the button "Retrieve input variables" to add your API key and the stored SSH name. Now you can creat teh workspace. The following activities are the same as use the Terraform function in command line editor. At first push the button "Generate plan". If this is finalized with no error you can "Apply plan". In this step the installation of the ressources are realized. During the activities you can follow the log view.
 
 With the following IBM-vpc-Terraform example, you can deploy following architecture:
+1. One VPC in Frankfurt
+2. One Address Prefix in Frankfurt02 data center with 172.21.0.0/21
+3. One SubNet 	vpc-space-1-eu-de-1-server  in Frankfurt02 with 172.21.0.0/24
+4. One ACL vpc-space-1-default-all-acl for SubNet vpc-space-1-eu-de-1-server
+5. One VSI in Frankfurt02  	webapp-eu-de-1
+6. One Floating IP 
+7. One Public Gateway
 
 
 ## Additional Documentation Provided with Useful links for Terraform and IBM CLoud 
