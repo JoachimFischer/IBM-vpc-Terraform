@@ -17,10 +17,10 @@ How push the button "Retrieve input variables" to add your API key and the store
 
 With the following IBM-vpc-Terraform example, you can deploy following architecture:
 1. One VPC in Frankfurt
-2. One Address Prefix in Frankfurt02 data center with 172.21.0.0/21
-3. One SubNet 	vpc-space-1-eu-de-1-server  in Frankfurt02 with 172.21.0.0/24
-4. One ACL vpc-space-1-default-all-acl for SubNet vpc-space-1-eu-de-1-server
-5. One VSI in Frankfurt02  	webapp-eu-de-1
+2. One Address Prefix in Frankfurt02 data center with *172.21.0.0/21*
+3. One SubNet 	*vpc-space-1-eu-de-1-server*  in Frankfurt02 with *172.21.0.0/24*
+4. One ACL *vpc-space-1-default-all-acl* for SubNet *vpc-space-1-eu-de-1-server*
+5. One VSI in Frankfurt02  	*webapp-eu-de-1*
 6. One Floating IP 
 7. One Public Gateway
 
