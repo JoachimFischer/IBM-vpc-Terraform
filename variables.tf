@@ -54,10 +54,10 @@ variable "address-prefix-1" {
 }
 
 #---------------------------------------------------------
-## DEFINE subnets for zone 1
+## DEFINE subnets for server in zone 1
 #---------------------------------------------------------
 
-variable "webapptier-subnet-zone-1" {
+variable "server-subnet-zone-1" {
   default = "172.21.0.0/24"
 }
 
@@ -84,11 +84,11 @@ variable "profile-server" {
   default = "cc1-2x4"
 }
 
-variable "webappserver-name" {
+variable "server-name" {
   default = "webapp"
 }
 
-variable "webappserver-count" {
+variable "server-count" {
   default = 1
 }
 
