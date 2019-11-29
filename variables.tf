@@ -8,7 +8,7 @@ variable "ibmcloud_api_key" {
 
 # 1 vpc generation classic, 2 vpc
 variable "generation" {
-  default = "2"
+  default = "1"
 }
 
 variable "ibmcloud_timeout" {
