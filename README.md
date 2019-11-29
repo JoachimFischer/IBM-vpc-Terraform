@@ -8,7 +8,8 @@ using IBM Cloud (cloud.ibm.com) with Infrastructure as Code (IaC) based on Terra
 2. [define a Ressource Group in IAM](https://cloud.ibm.com/account/resource-groups/) like: resource-vpc-space
 3. [define your ssh key for VPC infrastrucre:](https://cloud.ibm.com/vpc/compute/sshKeys/) like: user-ssh
 4. [define an IBM Cloud API key:](https://cloud.ibm.com/iam/apikeys/)
-5. Install IBM Cloud CLI: 
+
+Using the IBM Schematics service, it is not necessary to install Terraform, CLI on you local mashine. A workspace can be added in Schematics with direct connection to GitHuB to access the Terrform definition.
 
 
 ## Additional Documentation Provided with Useful links for Terraform and IBM CLoud 
