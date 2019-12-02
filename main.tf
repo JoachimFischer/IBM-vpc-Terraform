@@ -21,7 +21,7 @@ resource "ibm_is_vpc_address_prefix" "prefix1" {
   name = "zone1-cidr-1"
   vpc  = "${ibm_is_vpc.vpc1.id}"
   zone = "${var.zone1}"
-  cidr = "${var.address-prefix-1}"
+  cidr = "${var.vpc-address-prefix}"
 }
 
 
