@@ -2,7 +2,7 @@
 
 Using IBM Cloud (cloud.ibm.com) with Infrastructure as Code (IaC) based on Terraform for Virtual Private Clouds (VPCs)
 
-![first VSI in IBM Cloud VPC]<img src="https://github.com/JoachimFischer/IBM-vpc-Terraform/blob/master/Image/VSI-VPC.png " width="250">
+<img src="https://github.com/JoachimFischer/IBM-vpc-Terraform/blob/master/Image/VSI-VPC.png " width="500">
 
 ## Pre-requisit:
 1. [Setup an IBM Cloud Account at](https://cloud.IBM.com/)
