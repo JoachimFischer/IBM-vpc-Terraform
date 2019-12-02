@@ -1,18 +1,4 @@
 #---------------------------------------------------------
-# Map Gen1 to Gen2
-#---------------------------------------------------------
-module map_gen1_to_gen2 {
-  generation   = "${var.generation}"
-  source       = "./map-gen1-to-gen2/"
-  image        = "centos-7.x-amd64"
-  profile      = "cc1-2x4"
-}
-
-data "ibm_is_image" "ds_image" {
-  name = "${module.map_gen1_to_gen2.image}"
-}
-
-#---------------------------------------------------------
 # Get resource_group id
 #---------------------------------------------------------
 
