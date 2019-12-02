@@ -9,7 +9,7 @@ variable "ibmcloud_vpc_generation" {
   default = "1"
 }
 
-# cloud region
+# cloud region like eu-de or us-south
 variable "ibmcloud_region" {
   default = "eu-de"
 }
@@ -32,8 +32,10 @@ variable "resource_group" {
 
 
 #---------------------------------------------------------
-## DEFINE Zones
+## DEFINE Zones in Frankfurt region eu-de
 #---------------------------------------------------------
+## can use us-south-1 / use-south-2 / use-south-3
+----------------------------------------------------------
 # for Frankfurt02 data center
 variable "zone1" {
   default = "eu-de-1"
