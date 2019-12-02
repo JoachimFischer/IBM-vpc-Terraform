@@ -24,6 +24,8 @@ With the following IBM-vpc-Terraform example, you can deploy following architect
 6. One Floating IP 
 7. One Public Gateway
 
+## Change VPC generation
+with IBM Schematics, it is very easy to switch between both VPC generation. 
 
 ## Additional Documentation Provided with Useful links for Terraform and IBM CLoud 
 - [Terraform Documentation](https://www.terraform.io/docs/index.html)
