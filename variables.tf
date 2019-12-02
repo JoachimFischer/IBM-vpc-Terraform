@@ -49,7 +49,7 @@ variable "zone2" {
 
 # for Frankfurt05 data center
 variable "zone3" {
-  default = "us-south-de-3"
+  default = "us-south-3"
 }
 
 
