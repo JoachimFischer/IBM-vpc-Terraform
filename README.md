@@ -5,7 +5,7 @@ This Terraform project provide an example for a simple Virtual Provate Cloud (VP
 ## Pre-requisit:
 1. [Setup an IBM Cloud Account at](https://cloud.IBM.com/)
 2. [define a Ressource Group in IAM](https://cloud.ibm.com/account/resource-groups/) like: resource-vpc-space
-3. [define your ssh key for VPC infrastrucre:](https://cloud.ibm.com/vpc/compute/sshKeys/) like: user-ssh
+3. [define your ssh key for VPC infrastrucre:](https://cloud.ibm.com/vpc/compute/sshKeys/) like: user-ssh. If you use both VPC generations, it is necessary to define it twice.
 4. [define an IBM Cloud API key:](https://cloud.ibm.com/iam/apikeys/)
 
 Using the **IBM Schematics** service, it is not necessary to install Terraform, CLI on you local mashine. You can use it integrated in IBM Cloud Web GUI. A workspace can be added in Schematics with direct connection to GitHuB to access the Terrform definition.
