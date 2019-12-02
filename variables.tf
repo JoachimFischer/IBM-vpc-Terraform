@@ -12,6 +12,7 @@ variable "ssh_keyname" {}
 # 1 vpc generation classic, 2 vpc
 #---------------------------------------------------------
 variable "ibmcloud_vpc_generation" {
+  description = "You can change between GEN1 und GEN2 with value 1 or 2"
   default = "2"
 }
 
@@ -19,10 +20,12 @@ variable "ibmcloud_vpc_generation" {
 ## DEFINE VPC name and available Ressource Group (IAM)
 #---------------------------------------------------------
 variable "vpc-name" {
+  description = "Provide the name of your VPC"
   default = "vpc-space"
 }
 
 variable "resource_group" {
+  description = "The Ressource Roup must be defined in IBM Cloud IAM"
   default = "resource-vpc-space"
 }
 
@@ -32,6 +35,7 @@ variable "resource_group" {
 #---------------------------------------------------------
 # cloud region like eu-de (GEN1) or us-south (GEN2)
 variable "ibmcloud_region" {
+  description = "Region of VPC like eu-de (GEN1) or us-south (GEN2)"
   default = "us-south"
 }
 #---------------------------------------------------------
@@ -54,6 +58,7 @@ variable "zone3" {
 ## DEFINE CIDR Blocks for VPC in Region
 #---------------------------------------------------------
 variable "vpc-address-prefix" {
+  description = "The VPC address prefix"
   default = "172.21.0.0/21"
 }
 
