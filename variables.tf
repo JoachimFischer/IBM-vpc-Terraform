@@ -20,21 +20,16 @@ variable "ibmcloud_region" {
   default = "us-south"
 }
 
-variable "ibmcloud_timeout" {
-   default = 300
-}
-
 #---------------------------------------------------------
 ## DEFINE VPC name and available Ressource Group (IAM)
 #---------------------------------------------------------
 variable "vpc-name" {
-  default = "vpc-space-1"
+  default = "vpc-space"
 }
 
 variable "resource_group" {
   default = "resource-vpc-space"
 }
-
 
 #---------------------------------------------------------
 ## DEFINE Zones in Frankfurt region eu-de
@@ -61,7 +56,7 @@ variable "zone3" {
 #---------------------------------------------------------
 ## DEFINE CIDR Blocks to be used 
 #---------------------------------------------------------
-variable "address-prefix-1" {
+variable "vpc-address-prefix" {
   default = "172.21.0.0/21"
 }
 
@@ -130,4 +125,6 @@ variable "server-count" {
   default = 1
 }
 
-
+variable "ibmcloud_timeout" {
+   default = 300
+}
