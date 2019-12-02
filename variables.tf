@@ -89,7 +89,7 @@ variable "ssh_keyname" {}
 ##    "debian-9.x-amd64"      = "ibm-debian-9-0-64-minimal-for-vsi"
 #---------------------------------------------------------
 variable "image" {
-   default = "Ubuntu-16.04-amd64"
+   default = "ibm-ubuntu-16-04-05-64-minimal-for-vsi"
 }
 
 #---------------------------------------------------------
@@ -115,7 +115,7 @@ variable "image" {
 ##    "mc1-8x64"   = "mx2-8x64"
 #---------------------------------------------------------
 variable "profile-server" {
-  default = "cc1-2x4"
+  default = "cc2-2x4"
 }
 
 variable "server-name" {
