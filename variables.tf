@@ -35,7 +35,7 @@ variable "resource_group" {
 ## DEFINE Zones in Frankfurt region eu-de
 #---------------------------------------------------------
 ## can use us-south-1 / use-south-2 / use-south-3
-----------------------------------------------------------
+#----------------------------------------------------------
 # for Frankfurt02 data center
 variable "zone1" {
   default = "eu-de-1"
