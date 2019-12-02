@@ -11,7 +11,7 @@ data "ibm_is_ssh_key" "sshkey" {
 resource "ibm_is_instance" "server-zone1" {
   count   = "${var.server-count}"
   name    = "${var.server-name}-${var.zone1}"
-  image   = "${var.image}"
+  image   = "${data.image.id}"
   profile = "${var.profile-server}"
 
   primary_network_interface = {
