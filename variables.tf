@@ -15,11 +15,6 @@ variable "ibmcloud_vpc_generation" {
   default = "2"
 }
 
-# cloud region like eu-de (GEN1) or us-south (GEN2)
-variable "ibmcloud_region" {
-  default = "us-south"
-}
-
 #---------------------------------------------------------
 ## DEFINE VPC name and available Ressource Group (IAM)
 #---------------------------------------------------------
@@ -32,29 +27,31 @@ variable "resource_group" {
 }
 
 #---------------------------------------------------------
-## DEFINE Zones in Frankfurt region eu-de
+## DEFINE Region and Zones in US-South Dallas or
+## Frankfurt region eu-de
+#---------------------------------------------------------
+# cloud region like eu-de (GEN1) or us-south (GEN2)
+variable "ibmcloud_region" {
+  default = "us-south"
+}
 #---------------------------------------------------------
 ## can use us-south-1 / use-south-2 / use-south-3
 ## or eu-de-1 / eu-de-2 /eu-de-3
 #----------------------------------------------------------
-# for Frankfurt02 data center
 variable "zone1" {
   default = "us-south-1"
 }
 
-# for Frankfurt04 data center
 variable "zone2" {
   default = "us-south-2"
 }
 
-# for Frankfurt05 data center
 variable "zone3" {
   default = "us-south-3"
 }
 
-
 #---------------------------------------------------------
-## DEFINE CIDR Blocks to be used 
+## DEFINE CIDR Blocks for VPC in Region
 #---------------------------------------------------------
 variable "vpc-address-prefix" {
   default = "172.21.0.0/21"
