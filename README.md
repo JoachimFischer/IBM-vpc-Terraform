@@ -25,7 +25,7 @@ With the following IBM-vpc-Terraform example, you can deploy following architect
 7. One Public Gateway
 
 ## Change VPC generation
-with IBM Schematics, it is very easy to switch between both VPC generation. 
+with IBM Schematics, it is very easy to switch between both VPC generations. It is necessary to change the Image types and the server profiles. The Gen1 image "ubuntu-16.04-amd64" is called "ibm-ubuntu-16-04-05-64-minimal-for-vsi" in Gen2 and the Gen1 server profile "cc1-2x4" is called "cx2-2x4". 
 
 ## Additional Documentation Provided with Useful links for Terraform and IBM CLoud 
 - [Terraform Documentation](https://www.terraform.io/docs/index.html)
