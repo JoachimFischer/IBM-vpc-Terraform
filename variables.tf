@@ -1,10 +1,8 @@
 #---------------------------------------------------------
 # MODIFY VARIABLES AS NEEDED
 #---------------------------------------------------------
-#---------------------------------------------------------
-variable "ibmcloud_api_key" {
-   default = "XXXXXXX"
-}
+variable "ibmcloud_api_key" {}
+
 
 # 1 vpc generation classic, 2 vpc
 variable "ibmcloud_vpc_generation" {
@@ -75,18 +73,13 @@ variable "server-subnet-zone-3" {
 #---------------------------------------------------------
 ## DEFINE sshkey to be used for compute instances
 #---------------------------------------------------------
-variable "ssh_keyname" {
-  default="XXXXXXX"
-}
+variable "ssh_keyname" {}
 
 #---------------------------------------------------------
 ## DEFINE OS image to be used for compute instances
 #---------------------------------------------------------
+image = Ubuntu-16.04-amd64
 
-#image = Ubuntu-16.04-amd64
-variable "image" {
-  default = "7eb4e35b-4257-56f8-d7da-326d85452591"
-}
 
 #---------------------------------------------------------
 ## DEFINE compute instance profile & quantity
@@ -96,7 +89,7 @@ variable "profile-server" {
 }
 
 variable "server-name" {
-  default = "webapp"
+  default = "servername"
 }
 
 variable "server-count" {
