@@ -78,23 +78,24 @@ variable "ssh_keyname" {}
 #---------------------------------------------------------
 ## DEFINE OS image to be used for compute instances
 ## The image types are different between Gen1 and Gen2
+## You can generate this list via CLI   $ibmcloud is images
 ##
 ##        GEN 1                         GEN 2
-##    "windows-2016-amd64"    = "ibm-windows-2016-full-std-64"
-##    "ubuntu-16.04-amd64"    = "ibm-ubuntu-16-04-05-64-minimal-for-vsi"
+##    "ubuntu-16.04-amd64"    = "ibm-ubuntu-16-04-5-minimal-amd64-1"
 ##    "windows-2012-r2-amd64" = "ibm-windows-2012-r2-full-std-64"
 ##    "windows-2012-amd64"    = "ibm-windows-2012-full-std-64"
 ##    "centos-7.x-amd64"      = "ibm-centos-7-0-64"
-##    "ubuntu-18.04-amd64"    = "ibm-ubuntu-18-04-64"
-##    "debian-9.x-amd64"      = "ibm-debian-9-0-64-minimal-for-vsi"
+##    "ubuntu-18.04-amd64"    = "ibm-ubuntu-18-04-1-minimal-amd64-1"
+##    "debian-9.x-amd64"      = "ibm-debian-9-0-64-minimal-amd64-1"
 #---------------------------------------------------------
 variable "image" {
-   default = "ibm-ubuntu-16-04-05-64-minimal-for-vsi"
+   default = "ibm-ubuntu-16-04-5-minimal-amd64-1"
 }
 
 #---------------------------------------------------------
 ## DEFINE compute instance profile & quantity
 ## The image types are different between Gen1 and Gen2
+## You can generate this list via CLI   $ibmcloud is instance-profiles
 ##
 ##        GEN 1        GEN 2
 ##   "bc1-16x64"   = "bx2-16x64"
