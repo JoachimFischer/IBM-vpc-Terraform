@@ -118,7 +118,7 @@ data ibm_is_image "select_image" {
 ##    "mc1-8x64"   = "mx2-8x64"
 #---------------------------------------------------------
 variable "profile-server" {
-  default = "cc2-2x4"
+  default = "cx2-2x4"
 }
 
 variable "server-name" {
