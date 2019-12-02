@@ -3,8 +3,14 @@
 #---------------------------------------------------------
 variable "ibmcloud_api_key" {}
 
+#---------------------------------------------------------
+## DEFINE sshkey to be used for compute instances
+#---------------------------------------------------------
+variable "ssh_keyname" {}
 
+#---------------------------------------------------------
 # 1 vpc generation classic, 2 vpc
+#---------------------------------------------------------
 variable "ibmcloud_vpc_generation" {
   default = "1"
 }
@@ -18,9 +24,8 @@ variable "ibmcloud_timeout" {
    default = 300
 }
 
-
 #---------------------------------------------------------
-## DEFINE VPC
+## DEFINE VPC name and available Ressource Group (IAM)
 #---------------------------------------------------------
 variable "vpc-name" {
   default = "vpc-space-1"
@@ -71,11 +76,6 @@ variable "server-subnet-zone-2" {
 variable "server-subnet-zone-3" {
   default = "172.21.6.0/24"
 }
-
-#---------------------------------------------------------
-## DEFINE sshkey to be used for compute instances
-#---------------------------------------------------------
-variable "ssh_keyname" {}
 
 #---------------------------------------------------------
 ## DEFINE OS image to be used for compute instances
