@@ -88,7 +88,7 @@ variable "ssh_keyname" {}
 ##    "ubuntu-18.04-amd64"    = "ibm-ubuntu-18-04-1-minimal-amd64-1"
 ##    "debian-9.x-amd64"      = "ibm-debian-9-0-64-minimal-amd64-1"
 #---------------------------------------------------------
-data ibm_is_image "ubuntu" {
+data ibm_is_image "select_image" {
   name = "ibm-ubuntu-18-04-1-minimal-amd64-1"
 }
 
