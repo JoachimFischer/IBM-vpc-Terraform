@@ -15,9 +15,9 @@ variable "ibmcloud_vpc_generation" {
   default = "2"
 }
 
-# cloud region like eu-de or us-south
+# cloud region like eu-de (GEN1) or us-south (GEN2)
 variable "ibmcloud_region" {
-  default = "eu-de"
+  default = "us-south"
 }
 
 variable "ibmcloud_timeout" {
@@ -40,20 +40,21 @@ variable "resource_group" {
 ## DEFINE Zones in Frankfurt region eu-de
 #---------------------------------------------------------
 ## can use us-south-1 / use-south-2 / use-south-3
+## or eu-de-1 / eu-de-2 /eu-de-3
 #----------------------------------------------------------
 # for Frankfurt02 data center
 variable "zone1" {
-  default = "eu-de-1"
+  default = "us-south-1"
 }
 
 # for Frankfurt04 data center
 variable "zone2" {
-  default = "eu-de-2"
+  default = "us-south-2"
 }
 
 # for Frankfurt05 data center
 variable "zone3" {
-  default = "eu-de-3"
+  default = "us-south-de-3"
 }
 
 
