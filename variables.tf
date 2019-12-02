@@ -91,9 +91,9 @@ variable "server-subnet-zone-3" {
 ##    "ubuntu-18.04-amd64"    = "ibm-ubuntu-18-04-1-minimal-amd64-1"
 ##    "debian-9.x-amd64"      = "ibm-debian-9-0-64-minimal-amd64-1"
 #---------------------------------------------------------
-data ibm_is_image "select_image" {
+variable "select_image_name" {
   description = "use  GEN1 ubuntu-16.04-amd64  or GEN2  ibm-ubuntu-18-04-1-minimal-amd64-1"
-  name = "ibm-ubuntu-18-04-1-minimal-amd64-1"
+  default = "ibm-ubuntu-18-04-1-minimal-amd64-1"
 }
 
 #---------------------------------------------------------
