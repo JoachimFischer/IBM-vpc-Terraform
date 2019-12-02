@@ -1,7 +1,6 @@
 #---------------------------------------------------------
 # Get resource_group id
 #---------------------------------------------------------
-
 data "ibm_resource_group" "group" {
   name = "${var.resource_group}"
 }
@@ -9,7 +8,6 @@ data "ibm_resource_group" "group" {
 #---------------------------------------------------------
 # Create new VPC
 #---------------------------------------------------------
-
 resource "ibm_is_vpc" "vpc1" {
   name                = "${var.vpc-name}"
   resource_group      = "${data.ibm_resource_group.group.id}"
