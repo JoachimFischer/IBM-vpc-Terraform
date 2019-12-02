@@ -43,14 +43,17 @@ variable "ibmcloud_region" {
 ## or eu-de-1 / eu-de-2 /eu-de-3
 #----------------------------------------------------------
 variable "zone1" {
+  description = "use  eu-de-1 for GEN1 or us-south-1 for GEN2"
   default = "us-south-1"
 }
 
 variable "zone2" {
+    description = "use  eu-de-2 for GEN1 or us-south-3 for GEN2"
   default = "us-south-2"
 }
 
 variable "zone3" {
+    description = "use  eu-de-3 for GEN1 or us-south-3 for GEN2"
   default = "us-south-3"
 }
 
@@ -89,6 +92,7 @@ variable "server-subnet-zone-3" {
 ##    "debian-9.x-amd64"      = "ibm-debian-9-0-64-minimal-amd64-1"
 #---------------------------------------------------------
 data ibm_is_image "select_image" {
+  description = "use  GEN1 ubuntu-16.04-amd64  or GEN2  ibm-ubuntu-18-04-1-minimal-amd64-1"
   name = "ibm-ubuntu-18-04-1-minimal-amd64-1"
 }
 
@@ -116,6 +120,7 @@ data ibm_is_image "select_image" {
 ##    "mc1-8x64"   = "mx2-8x64"
 #---------------------------------------------------------
 variable "profile-server" {
+  description = "use  GEN1 cc1-2x4  or GEN2  cx2-2x4"
   default = "cx2-2x4"
 }
 
