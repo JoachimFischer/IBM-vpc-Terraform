@@ -2,23 +2,23 @@
 # Get resource_group id
 #---------------------------------------------------------
 data "ibm_resource_group" "group" {
-  name = "${var.resource_group}"
+  name = var.resource_group
 }
 
 #---------------------------------------------------------
 # Get VSI image id
 #---------------------------------------------------------
 data ibm_is_image "select_image" {
-  name = "${var.select_image_name}"
+  name = var.select_image_name
 }
 
 #---------------------------------------------------------
 # Create new VPC
 #---------------------------------------------------------
 resource "ibm_is_vpc" "vpc1" {
-  name                = "${var.vpc-name}"
-  resource_group      = "${data.ibm_resource_group.group.id}"
-#  default_network_acl = "${ibm_is_network_acl.default_all_acl.id}"
+  name                = var.vpc-name
+  resource_group      = data.ibm_resource_group.group.id
+#  default_network_acl = ibm_is_network_acl.default_all_acl.id
 }
 
 #---------------------------------------------------------
@@ -26,9 +26,9 @@ resource "ibm_is_vpc" "vpc1" {
 #---------------------------------------------------------
 resource "ibm_is_vpc_address_prefix" "prefix1" {
   name = "zone1-cidr-1"
-  vpc  = "${ibm_is_vpc.vpc1.id}"
-  zone = "${var.zone1}"
-  cidr = "${var.vpc-address-prefix}"
+  vpc  = ibm_is_vpc.vpc1.id
+  zone = var.zone1
+  cidr = var.vpc-address-prefix
 }
 
 
@@ -37,8 +37,8 @@ resource "ibm_is_vpc_address_prefix" "prefix1" {
 #---------------------------------------------------------
 resource "ibm_is_public_gateway" "pubgw-zone1" {
   name = "${var.vpc-name}-${var.zone1}-pubgw"
-  vpc  = "${ibm_is_vpc.vpc1.id}"
-  zone = "${var.zone1}"
+  vpc  = ibm_is_vpc.vpc1.id
+  zone = var.zone1
 }
 
 
@@ -47,8 +47,8 @@ resource "ibm_is_public_gateway" "pubgw-zone1" {
 #---------------------------------------------------------
 resource "ibm_is_subnet" "server-subnet-zone1" {
   name            = "${var.vpc-name}-${var.zone1}-server"
-  vpc             = "${ibm_is_vpc.vpc1.id}"
-  zone            = "${var.zone1}"
-  ipv4_cidr_block = "${var.server-subnet-zone-1}"
-  public_gateway  = "${ibm_is_public_gateway.pubgw-zone1.id}"
+  vpc             = ibm_is_vpc.vpc1.id
+  zone            = var.zone1
+  ipv4_cidr_block = var.server-subnet-zone-1
+  public_gateway  = ibm_is_public_gateway.pubgw-zone1.id
 }
