@@ -1,4 +1,4 @@
-# IBM-vpc-Terraform
+# IBM-vpc-Terraform 
 
 This Terraform project provide an example for a simple Virtual Provate Cloud (VPC) example with one virtual mashine. It based on IBM Cloud (cloud.ibm.com) with Infrastructure as Code (IaC). You can use the Terraform example native with Comand line, or use the [IBM Cloud Schematics](https://cloud.ibm.com/schematics/overview) solution without local installation.
 
@@ -25,6 +25,7 @@ With the  IBM-vpc-Terraform example, you can deploy following architecture:
 4. One VSI in Frankfurt02  	*webapp-eu-de-1*
 5. One Floating IP 
 6. One Public Gateway
+
 
 <img src="https://github.com/JoachimFischer/IBM-vpc-Terraform/blob/master/Image/VSI-VPC.png " width="500">
 
