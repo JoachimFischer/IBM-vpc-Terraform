@@ -32,6 +32,8 @@ variable "resource_group" {
 #---------------------------------------------------------
 ## DEFINE Region and Zones in US-South Dallas or
 ## Frankfurt region eu-de
+## To switch regin via CLI:  $ibmcloud target -r us-south  
+## or   ibmcloud target -r eu-de
 #---------------------------------------------------------
 # cloud region like eu-de (GEN1) or us-south (GEN2)
 variable "ibmcloud_region" {
@@ -81,15 +83,17 @@ variable "server-subnet-zone-3" {
 #---------------------------------------------------------
 ## DEFINE OS image to be used for compute instances
 ## The image types are different between Gen1 and Gen2
-## You can generate this list via CLI   $ibmcloud is images
+## You can generate the full list via CLI   $ibmcloud is images
+## To switsch between both genaration via CLI   $ibmcloud is target --gen 2
+## or   $ibmcloud is target --gen 1
 ##
-##        GEN 1                         GEN 2
-##    "ubuntu-16.04-amd64"    = "ibm-ubuntu-16-04-5-minimal-amd64-1"
-##    "windows-2012-r2-amd64" = "ibm-windows-2012-r2-full-std-64"
-##    "windows-2012-amd64"    = "ibm-windows-2012-full-std-64"
-##    "centos-7.x-amd64"      = "ibm-centos-7-0-64"
-##    "ubuntu-18.04-amd64"    = "ibm-ubuntu-18-04-1-minimal-amd64-1"
-##    "debian-9.x-amd64"      = "ibm-debian-9-0-64-minimal-amd64-1"
+##        GEN 1                                             GEN 2
+##    "ibm-ubuntu-16-04-6-minimal-amd64-1 "               = "ibm-ubuntu-16-04-5-minimal-amd64-1 "
+##    "ibm-windows-server-2012-r2-full-standard-amd64-1 " =  actual not available
+##    "ibm-windows-server-2012-full-standard-amd64-1"     =  actual not available
+##    "ibm-centos-7-6-minimal-amd64-1 "                   = "ibm-centos-7-0-64"
+##    "ibm-ubuntu-18-04-2-minimal-amd64-1"                = "ibm-centos-7-6-minimal-amd64-1 "
+##    "ibm-debian-9-9-minimal-amd64-1 "                   = "ibm-debian-9-9-minimal-amd64-1 "
 #---------------------------------------------------------
 variable "select_image_name" {
   description = "use  GEN1 ubuntu-16.04-amd64  or GEN2  ibm-ubuntu-18-04-1-minimal-amd64-1"
@@ -118,6 +122,12 @@ variable "select_image_name" {
 ##    "mc1-32x256" = "mx2-32x256"
 ##   "mc1-4x32"    = "mx2-4x32"
 ##    "mc1-8x64"   = "mx2-8x64"
+##
+## plus power server within GEN 2 like:
+##     "bp2-2x8"
+##     "cp2-2x4"
+##     "gp2-24x224x2"
+##     "mp2-2x16"
 #---------------------------------------------------------
 variable "profile-server" {
   description = "use  GEN1 cc1-2x4  or GEN2  cx2-2x4"
