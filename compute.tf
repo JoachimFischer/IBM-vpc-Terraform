@@ -2,7 +2,7 @@
 # Use existing sshkey
 #---------------------------------------------------------
 data "ibm_is_ssh_key" "sshkey" {
-  name = var.ssh_key
+  name = var.ssh_keyname
 }
 
 #---------------------------------------------------------
