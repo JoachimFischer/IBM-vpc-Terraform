@@ -6,7 +6,7 @@ variable "ibmcloud_api_key" {}
 #---------------------------------------------------------
 ## DEFINE sshkey to be used for compute instances
 #---------------------------------------------------------
-variable "ssh_key" {}
+variable "ssh_keyname" {}
 
 #---------------------------------------------------------
 # 1 vpc generation classic, 2 vpc
