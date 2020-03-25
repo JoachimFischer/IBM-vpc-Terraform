@@ -1,4 +1,4 @@
-rene.tfvars
+*.tfvars
 .terraform
 terraform.tfstate
 usage.txt
