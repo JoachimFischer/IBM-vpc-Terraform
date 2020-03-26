@@ -150,7 +150,7 @@ variable "ibmcloud_timeout" {
 ## Create VPN Connection 
 #---------------------------------------------------------
 variable "vpn_gw"{
-  default = "vpngwrene"
+  default = "vpngw1"
 }
 
 variable "vpn_gw_con"{
