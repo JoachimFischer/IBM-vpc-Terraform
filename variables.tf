@@ -145,3 +145,27 @@ variable "server-count" {
 variable "ibmcloud_timeout" {
    default = 300
 }
+
+#---------------------------------------------------------
+## Create VPN Connection 
+#---------------------------------------------------------
+variable "vpn_gw"{
+  default = "vpngwrene"
+}
+
+variable "vpn_gw_con"{
+  default = "vpngwcon1"
+}
+
+variable "peer_adress"{
+  default = "46.142.11.133"
+}
+
+variable "preshared_key" {
+  default = "DEADBEEF"
+}
+
+variable "peer_ipv4_cidr_block"{
+  default = ["192.168.178.0/24"]
+}
+
