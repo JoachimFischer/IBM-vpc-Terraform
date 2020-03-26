@@ -158,7 +158,7 @@ variable "vpn_gw_con"{
 }
 
 variable "peer_adress"{
-  default = "46.142.11.133"
+  default = "1.2.3.4"
 }
 
 variable "preshared_key" {
