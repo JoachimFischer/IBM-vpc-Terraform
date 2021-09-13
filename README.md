@@ -32,9 +32,15 @@ With the  IBM-vpc-Terraform example, you can deploy following architecture:
 <img src="https://github.com/JoachimFischer/IBM-vpc-Terraform/blob/master/Image/VSI-VPC.png " width="500">
 
 ## Change VPC profiles
-With IBM Schematics, it is very easy to switch between VPC flavours. So, please validate the list via CLI comand: $ibmcloud is instance-profiles. 
-To switch the region to Frankfurt eu-de use following CLI: $ibmcloud target -r eu-de
+With IBM Schematics, it is very easy to switch between VPC flavours. So, please validate the list via CLI comand: 
+$ibmcloud is instance-profiles. 
+
+To switch the region to Frankfurt eu-de use following CLI: 
+$ibmcloud target -r eu-de
+
 The default flavor is: cx2-2x4
+
+It is not necessary to install the IBM CLI local, you can use the IBM Cloud Shell out of the Web GUI. If you have logon to the Cloud portal, you find the symbole in the top menue on the right side.
 
 The variables.tf contain the mapping information.
 
