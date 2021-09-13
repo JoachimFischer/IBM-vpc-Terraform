@@ -33,18 +33,20 @@ With the  IBM-vpc-Terraform example, you can deploy following architecture:
 
 ## Change VPC profiles
 With IBM Schematics, it is very easy to switch between VPC flavours. So, please validate the list via CLI comand: 
-$ibmcloud is instance-profiles. 
+``$ibmcloud is instance-profiles``
 
 To switch the region to Frankfurt eu-de use following CLI: 
-$ibmcloud target -r eu-de
+``$ibmcloud target -r eu-de``
 
 The default flavor is: cx2-2x4
+
+It is also possible to get the information of available images out of Cloud CLI with following comand: 
+``$ibmcloud is images``   
 
 It is not necessary to install the IBM CLI local, you can use the IBM Cloud Shell out of the Web GUI. If you have logon to the Cloud portal, you find the symbole in the top menue on the right side.
 
 The variables.tf contain the mapping information.
 
-It is also possible to get the information out of Cloud CLI with following comand: $ibmcloud is images   or $ibmcloud is images
 
 ## Additional Documentation Provided with Useful links for Terraform and IBM CLoud 
 - [Terraform Documentation](https://www.terraform.io/docs/index.html)
