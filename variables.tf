@@ -84,7 +84,7 @@ variable "server-subnet-zone-3" {
 ## "ibm-debian-9-9-minimal-amd64-2"
 #---------------------------------------------------------
 variable "select_image_name" {
-  description = "use  ibm-ubuntu-20-04-2-minimal-amd64-1"
+  description = "use  ibm-ubuntu-20-04-2-minimal-amd64-1 or select: $ibmcloud is images"
   default = "ibm-ubuntu-20-04-2-minimal-amd64-1"
 }
 
@@ -106,7 +106,7 @@ variable "select_image_name" {
 ##   
 #---------------------------------------------------------
 variable "profile-server" {
-  description = "use  GEN1 cc1-2x4  or GEN2  cx2-2x4"
+  description = "use cx2-2x4 or select: $ibmcloud is instance-profiles"
   default = "cx2-2x4"
 }
 
