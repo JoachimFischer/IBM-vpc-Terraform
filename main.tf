@@ -13,7 +13,8 @@ data ibm_is_image "select_image" {
 }
 
 #---------------------------------------------------------
-# Create new VPC, ACL can added
+# Create new VPC, 
+# ACL can added in network-acls.tf
 #---------------------------------------------------------
 resource "ibm_is_vpc" "vpc1" {
   name                = var.vpc-name
