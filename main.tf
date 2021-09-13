@@ -13,7 +13,7 @@ data ibm_is_image "select_image" {
 }
 
 #---------------------------------------------------------
-# Create new VPC
+# Create new VPC, ACL can added
 #---------------------------------------------------------
 resource "ibm_is_vpc" "vpc1" {
   name                = var.vpc-name
