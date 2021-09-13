@@ -31,6 +31,7 @@ With the  IBM-vpc-Terraform example, you can deploy following architecture:
 <img src="https://github.com/JoachimFischer/IBM-vpc-Terraform/blob/master/Image/VSI-VPC.png " width="500">
 
 ## Change VPC generation
+=> Update: Since 2020 only Gen2 instance Profiles are available as default.
 With IBM Schematics, it is very easy to switch between both VPC generations. The image types for Gen1 and Gen2 are using actual the same naming conventions. But not all Images von Gen1 are available in Gen2 actual. So, please validate the list via CLI comand: $ibmcloud is target --gen 2
 
 In Gen1 and the Gen2 the server profile name use following naming convention: "cc1-2x4" is called "cx2-2x4". But in Gen2 there are more flavours like Power systems with "bp2-2x8" or "gp2-24x224x2". The full list is available via CLI: $ibmcloud is instance-profiles   if you have switched between Gen1 and Gen2 and use the region where Gen2 is available like $ibmcloud target -r us-south  
