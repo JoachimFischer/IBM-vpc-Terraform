@@ -119,7 +119,7 @@ variable "server-count" {
 }
 
 variable "ibmcloud_timeout" {
-   default = 300
+   default = 3000
 }
 
 #---------------------------------------------------------
