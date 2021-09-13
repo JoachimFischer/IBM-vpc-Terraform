@@ -40,3 +40,4 @@ resource "ibm_is_instance" "server-zone1" {
 #  name    = "${var.server-name}-${var.zone1}-fip"
 #  target  = element(ibm_is_instance.server-zone1.*.primary_network_interface.0.id, count.index)
 #}
+#
