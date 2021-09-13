@@ -14,7 +14,8 @@ Using the **IBM Schematics** service, it is **not** necessary to install Terrafo
 
 If you have logon into IBM Cloud Account, switch to [Schematics](https://cloud.ibm.com/schematics/overview) and define your Workspace. Therfore you have define the Workspace name, use your Resource group and add the GitHub URL like https://github.com/JoachimFischer/IBM-vpc-Terraform
 
-Now push the button *"Retrieve input variables"* to add your API key and the stored SSH name. Now you can creat teh workspace. In this panel you can also switch between both VPC generations. Change the value of variable *ibmcloud_vpc_generation* from *1* for Generation1 to *2* for Generation2. It is necessary to change the server image type and the server profile if you switch between VPC generations. To get more informaton use following [Link](https://cloud.ibm.com/docs/overview?topic=overview-compare-vpc-vpcoc&origin_team=T02J3DPUE). 
+Now push the button *"Retrieve input variables"* to add your API key and the stored SSH name. The information about your API key are available in IAM menue under API Key for classic infrastructure. Now you can creat the workspace. Before starting, please add your SSH key in VPC Infrastructure. 
+
 
 After adding the variable values, use the button of Terraform function. At first push the button *"Generate plan"*. If this is finalized with no error you can *"Apply plan"*. In this step the installation of the ressources are realized. During the activities you can follow the log view.
 
@@ -30,11 +31,10 @@ With the  IBM-vpc-Terraform example, you can deploy following architecture:
 
 <img src="https://github.com/JoachimFischer/IBM-vpc-Terraform/blob/master/Image/VSI-VPC.png " width="500">
 
-## Change VPC generation
-=> Update: Since 2020 only Gen2 instance Profiles are available as default.
-With IBM Schematics, it is very easy to switch between both VPC generations. The image types for Gen1 and Gen2 are using actual the same naming conventions. But not all Images von Gen1 are available in Gen2 actual. So, please validate the list via CLI comand: $ibmcloud is target --gen 2
-
-In Gen1 and the Gen2 the server profile name use following naming convention: "cc1-2x4" is called "cx2-2x4". But in Gen2 there are more flavours like Power systems with "bp2-2x8" or "gp2-24x224x2". The full list is available via CLI: $ibmcloud is instance-profiles   if you have switched between Gen1 and Gen2 and use the region where Gen2 is available like $ibmcloud target -r us-south  
+## Change VPC profiles
+With IBM Schematics, it is very easy to switch between VPC flavours. So, please validate the list via CLI comand: $ibmcloud is instance-profiles. 
+To switch the region to Frankfurt eu-de use following CLI: $ibmcloud target -r eu-de
+The default flavor is: cx2-2x4
 
 The variables.tf contain the mapping information.
 
