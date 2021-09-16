@@ -31,17 +31,6 @@ resource "ibm_is_vpc_address_prefix" "prefix1" {
   cidr = var.vpc-address-prefix
 }
 
-
-#---------------------------------------------------------
-# Get Public Gateway's for Zone 1
-#---------------------------------------------------------
-resource "ibm_is_public_gateway" "pubgw-zone1" {
-  name = "${var.vpc-name}-${var.zone1}-pubgw"
-  vpc  = ibm_is_vpc.vpc1.id
-  zone = var.zone1
-}
-
-
 #---------------------------------------------------------
 ## Create Webapp Subnets in Zone1
 #---------------------------------------------------------
