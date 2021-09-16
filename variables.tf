@@ -125,23 +125,23 @@ variable "ibmcloud_timeout" {
 #---------------------------------------------------------
 ## Create VPN Connection 
 #---------------------------------------------------------
-variable "vpn_gw"{
-  default = "vpngw1"
-}
+#variable "vpn_gw"{
+#  default = "vpngw1"
+#}
 
-variable "vpn_gw_con"{
-  default = "vpngwcon1"
-}
+#variable "vpn_gw_con"{
+#  default = "vpngwcon1"
+#}
 
-variable "peer_adress"{
-  default = "1.2.3.4"
-}
+#variable "peer_adress"{
+#  default = "1.2.3.4"
+#}
 
-variable "preshared_key" {
-  default = "DEADBEEF"
-}
+#variable "preshared_key" {
+#  default = "DEADBEEF"
+#}
 
-variable "peer_ipv4_cidr_block"{
-  default = ["192.168.178.0/24"]
-}
+#variable "peer_ipv4_cidr_block"{
+#  default = ["192.168.178.0/24"]
+#}
 
