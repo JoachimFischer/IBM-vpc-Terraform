@@ -26,7 +26,7 @@ With the  IBM-vpc-Terraform example, you can deploy following architecture:
 4. One VSI in Frankfurt02  	*webapp-eu-de-1*
 5. One Floating IP 
 6. One Public Gateway
-7. One VPN Gateway with a VPC IPSec Connection
+7. One VPN Gateway with a VPC IPSec Connection (optional)
 
 
 <img src="https://github.com/JoachimFischer/IBM-vpc-Terraform/blob/master/Image/VSI-VPC.png " width="500">
