@@ -14,7 +14,7 @@ Using the **IBM Schematics** service, it is **not** necessary to install Terrafo
 
 If you have logon into IBM Cloud Account, switch to [Schematics](https://cloud.ibm.com/schematics/overview) and define your Workspace. Therfore you have define the Workspace name, use your Resource group and add the GitHub URL like https://github.com/JoachimFischer/IBM-vpc-Terraform
 
-Now push the button *"Retrieve input variables"* to add your API key and the stored SSH name. The information about your API key are available in IAM menue under API Key for classic infrastructure. Now you can creat the workspace. Before starting, please add your SSH key in VPC Infrastructure. 
+Now push the button *"Retrieve input variables"* to add your API key and the stored SSH name. The information about your API key are available in IAM menue under API Key for classic infrastructure. Now you can creat the workspace. Before starting, please add your SSH key in VPC Infrastructure. THis SSH-key name is added to requesting varibale.
 
 
 After adding the variable values, use the button of Terraform function. At first push the button *"Generate plan"*. If this is finalized with no error you can *"Apply plan"*. In this step the installation of the ressources are realized. During the activities you can follow the log view.
