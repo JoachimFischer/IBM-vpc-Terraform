@@ -31,6 +31,8 @@ With the  IBM-vpc-Terraform example, you can deploy following architecture:
 
 <img src="https://github.com/JoachimFischer/IBM-vpc-Terraform/blob/master/Image/VSI-VPC.png " width="500">
 
+It is only possible to access the server via SSH. Therefore only port 22 is allowed.
+
 ## Change VPC profiles
 With IBM Schematics, it is very easy to switch between VPC flavours. So, please validate the list via CLI comand: 
 ``$ibmcloud is instance-profiles``
