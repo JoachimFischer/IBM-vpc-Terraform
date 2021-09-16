@@ -1,5 +1,8 @@
-## Connect Server via SSH and port 22             ##
-##
+#---------------------------------------------------------
+# Connect Server via SSH and port 22
+#---------------------------------------------------------
+#
+
 resource "ibm_is_network_acl" "default_all_acl" {
   name = "${var.vpc-name}-default-all-acl"
 
