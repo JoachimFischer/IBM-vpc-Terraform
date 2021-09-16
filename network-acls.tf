@@ -11,7 +11,7 @@ resource "ibm_is_network_acl" "default_all_acl" {
       name        = "${var.vpc-name}-default-allow-all-inbound"
       action      = "allow"
       source      = "0.0.0.0/0"
-      destination = "${var.server-subnet-zone-1}"
+      destination = var.server-subnet-zone-1
       direction   = "inbound"
       tcp {
         port_max        = 22
