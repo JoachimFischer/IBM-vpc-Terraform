@@ -5,7 +5,7 @@
 
 resource "ibm_is_network_acl" "default_all_acl" {
   name = "${var.vpc-name}-default-all-acl"
-  vpc  = ibm_is_vpc.testacc_vpc.id
+  vpc  = ibm_is_vpc.vpc1
 }
 
 resource "ibm_is_network_acl_rule" "isExampleACLRule1" {
