@@ -19,7 +19,6 @@ data ibm_is_image "select_image" {
 resource "ibm_is_vpc" "vpc1" {
   name                = var.vpc-name
   resource_group      = data.ibm_resource_group.group.id
-  default_network_acl = ibm_is_network_acl.default_all_acl.id
 }
 
 #---------------------------------------------------------
