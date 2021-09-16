@@ -19,7 +19,7 @@ resource "ibm_is_network_acl_rule" "isExampleACLRule1" {
 resource "ibm_is_network_acl_rule" "isExampleACLRule2" {
       name        = "${var.vpc-name}-default-allow-all-outbound"
       action      = "allow"
-      source      = var.server-subnet-zone-1
+      source      = "0.0.0.0/0"
       destination = "0.0.0.0/0"
       direction   = "outbound"
     }
