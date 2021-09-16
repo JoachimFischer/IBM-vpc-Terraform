@@ -3,14 +3,9 @@
 #---------------------------------------------------------
 #
 
-resource "ibm_is_network_acl" "default_all_acl" {
-  name = "${var.vpc-name}-default-all-acl"
-  vpc  = ibm_is_vpc.vpc1
-}
-
 resource "ibm_is_network_acl" "is-vpc-acl" {
   name = "is-vpc-acl-1"
-  vpc  = ibm_is_vpc.vpc1
+  vpc  = ibm_is_vpc.vpc1.id
   rules {
     name        = "outbound"
     action      = "allow"
