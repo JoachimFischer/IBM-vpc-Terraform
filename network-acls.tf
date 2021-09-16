@@ -12,7 +12,6 @@ resource "ibm_is_network_acl_rule" "isExampleACLRule1" {
       name        = "${var.vpc-name}-default-allow-all-inbound"
       action      = "allow"
       source      = "0.0.0.0/0"
-      destination = "0.0.0.0/0"
       destination = var.server-subnet-zone-1
       direction   = "inbound"
     }
@@ -20,7 +19,7 @@ resource "ibm_is_network_acl_rule" "isExampleACLRule1" {
 resource "ibm_is_network_acl_rule" "isExampleACLRule2" {
       name        = "${var.vpc-name}-default-allow-all-outbound"
       action      = "allow"
-      source      = "0.0.0.0/0"
+      source      = var.server-subnet-zone-1
       destination = "0.0.0.0/0"
       direction   = "outbound"
     }
