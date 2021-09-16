@@ -28,6 +28,7 @@ With the  IBM-vpc-Terraform example, you can deploy following architecture:
 6. One Public Gateway
 7. One VPN Gateway with a VPC IPSec Connection (optional)
 
+After the infrastructure is deployed you can test it. Logon into the server: ``$ssh root@server-ip``
 
 <img src="https://github.com/JoachimFischer/IBM-vpc-Terraform/blob/master/Image/VSI-VPC.png " width="500">
 
