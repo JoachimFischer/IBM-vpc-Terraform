@@ -26,3 +26,7 @@ resource "ibm_is_network_acl" "is-vpc-acl" {
   }
 }
 
+resource "ibm_is_subnet_network_acl_attachment" attach {
+  subnet      = var.server-subnet-zone-1.id
+  network_acl = ibm_is_network_acl.is-vpc-acl.id
+}
