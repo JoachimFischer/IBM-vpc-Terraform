@@ -41,7 +41,7 @@ resource "ibm_is_vpc_address_prefix" "prefix-3" {
   name = "zone3-cidr-3"
   vpc  = ibm_is_vpc.vpc1.id
   zone = var.zone3
-  cidr = var.vpc-address-prefix-2
+  cidr = var.vpc-address-prefix-3
 }
 
 #---------------------------------------------------------
