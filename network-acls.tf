@@ -27,6 +27,6 @@ resource "ibm_is_network_acl" "is-vpc-acl" {
 }
 
 resource "ibm_is_subnet_network_acl_attachment" attach {
-  subnet      = server-subnet-zone-1.id
+  subnet      = server-subnet-zone1.id
   network_acl = ibm_is_network_acl.is-vpc-acl.id
 }
