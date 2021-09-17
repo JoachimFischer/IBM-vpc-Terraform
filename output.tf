@@ -9,7 +9,7 @@ output "pgw_ip_addresses" {
 #--------------------------------------
 # Output of Floating IPs
 #--------------------------------------
-output "ip_address" {
-  value = ibm_is_floating_ip.server-zone1-fip.address
-}
+# output "ip_address" {
+#   value = ibm_is_floating_ip.server-zone1-fip.address
+# }
 
