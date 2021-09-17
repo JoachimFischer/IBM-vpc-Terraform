@@ -60,7 +60,7 @@ resource "ibm_is_subnet" "server-subnet-zone2" {
   vpc             = ibm_is_vpc.vpc1.id
   zone            = var.zone2
   ipv4_cidr_block = var.server-subnet-zone-2
-  public_gateway  = ibm_is_public_gateway.pubgw-zone2.id
+ # public_gateway  = ibm_is_public_gateway.pubgw-zone2.id
 }
 
 resource "ibm_is_subnet" "server-subnet-zone3" {
@@ -68,5 +68,5 @@ resource "ibm_is_subnet" "server-subnet-zone3" {
   vpc             = ibm_is_vpc.vpc1.id
   zone            = var.zone3
   ipv4_cidr_block = var.server-subnet-zone-3
-  public_gateway  = ibm_is_public_gateway.pubgw-zone3.id
+ # public_gateway  = ibm_is_public_gateway.pubgw-zone3.id
 }
