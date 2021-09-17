@@ -52,12 +52,22 @@ variable "zone3" {
 }
 
 #---------------------------------------------------------
-## DEFINE CIDR Blocks for VPC in Region
+## DEFINE CIDR Blocks 172.21.0.0/21 for VPC in Regions
 #---------------------------------------------------------
-variable "vpc-address-prefix" {
+variable "vpc-address-prefix-1" {
   description = "The VPC address prefix"
-  default = "172.21.0.0/21"
+  default = "172.21.0.0/24"
 }
+
+variable "vpc-address-prefix-2" {
+  description = "The VPC address prefix"
+  default = "172.21.3.0/24"
+}
+variable "vpc-address-prefix-3" {
+  description = "The VPC address prefix"
+  default = "172.21.6.0/24"
+}
+
 
 #---------------------------------------------------------
 ## DEFINE subnets for server in each zone
