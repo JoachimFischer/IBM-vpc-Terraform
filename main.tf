@@ -1,8 +1,15 @@
 #---------------------------------------------------------
-# Get resource_group id
+# Get resource_group id, the actual or "dafault" will used
 #---------------------------------------------------------
-data "ibm_resource_group" "group" {
-  name = var.resource_group
+# data "ibm_resource_group" "group" {
+#   name = var.resource_group
+# }
+
+#---------------------------------------------------------
+# Create ressource_group with variable definition
+#---------------------------------------------------------
+resource "ibm_resource_group" "resourceGroup" {
+  name     = var.resource_group
 }
 
 #---------------------------------------------------------
