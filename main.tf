@@ -8,7 +8,7 @@
 #---------------------------------------------------------
 # Create ressource_group with variable definition
 #---------------------------------------------------------
-resource "ibm_resource_group" "resourceGroup" {
+resource "ibm_resource_group" "group" {
   name     = var.resource_group
 }
 
