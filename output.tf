@@ -5,9 +5,9 @@
 #--------------------------------------
 #  Output of IPs from public gateways
 #--------------------------------------
-output "pgw_ip_addresses" {
-  value = ibm_is_public_gateway.pubgw-zone1.floating_ip.address
-}
+#output "pgw_ip_addresses" {
+#  value = ibm_is_public_gateway.pubgw-zone1.floating_ip.address
+#}
 
 #--------------------------------------
 # Output of Floating IPs
@@ -32,9 +32,9 @@ output "vpc" {
 			zone2 = ibm_is_subnet.vpc_subnet2
 			zone3 = ibm_is_subnet.vpc_subnet3
 		}
-    output "pgw_ip_addresses" {
-      zone1 = ibm_is_public_gateway.pubgw-zone1.floating_ip.address
-     # zone2 = ibm_is_public_gateway.pubgw-zone2.floating_ip.address
-     # zone3 = ibm_is_public_gateway.pubgw-zone3.floating_ip.address    
-	}
+		pgw = {
+                       zone1 = ibm_is_public_gateway.pubgw-zone1.floating_ip.address
+                     # zone2 = ibm_is_public_gateway.pubgw-zone2.floating_ip.address
+                     # zone3 = ibm_is_public_gateway.pubgw-zone3.floating_ip.address    
+	        }
 }
