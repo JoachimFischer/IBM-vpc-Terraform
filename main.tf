@@ -48,7 +48,8 @@ resource "ibm_is_vpc_address_prefix" "prefix-3" {
 }
 
 #---------------------------------------------------------
-## Create Subnets in Zone1 / Zone2 / Zone3
+# Create Subnets in Zone1 / Zone2 / Zone3
+# adding public gateway to each subnet in each zone
 #---------------------------------------------------------
 resource "ibm_is_subnet" "server-subnet-zone1" {
   name            = "${var.vpc-name}-${var.zone1}-server"
