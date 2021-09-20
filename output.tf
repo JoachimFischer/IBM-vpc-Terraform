@@ -19,9 +19,9 @@ output "pgw_ip_addresses" {
 #--------------------------------------
 # Output of Subnet
 #--------------------------------------
-# output "subnet_zone1" {
-#   value = ibm_is_subnet.server-subnet-zone1.subnet_cidr
-# }
+ output "subnet_zone1" {
+   value = ibm_is_subnet.server-subnet-zone1.subnet_cidr
+ }
 # output "subnet_zone2" {
 #   value = ibm_is_subnet.server-subnet-zone2.subnet_cidr
 # }
@@ -30,7 +30,7 @@ output "pgw_ip_addresses" {
 # }
 
 
--------------------------------------------------
+#-------------------------------------------------
 #output "vpc" {
 #	value = {
 #		vpc = {
