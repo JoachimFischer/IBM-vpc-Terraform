@@ -1,8 +1,8 @@
 #---------------------------------------------------------
-# Get resource_group id, the actual or "dafault" will used
+# Get resource_group id, the "dafault" will used
 #---------------------------------------------------------
 # data "ibm_resource_group" "group" {
-#   name = var.resource_group
+#   is_default = "true"
 # }
 
 #---------------------------------------------------------
@@ -24,7 +24,7 @@ data ibm_is_image "select_image" {
 #---------------------------------------------------------
 resource "ibm_is_vpc" "vpc1" {
   name                = var.vpc-name
-  resource_group      = data.ibm_resource_group.group.id
+  resource_group      = var.resource_group
 }
 
 #---------------------------------------------------------
