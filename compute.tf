@@ -25,8 +25,11 @@ resource "ibm_is_instance" "server-zone1" {
 
   //User can configure timeouts
   timeouts {
-    create = "90m"
-    delete = "30m"
+timeouts {
+		create = "20m"
+		update = "20m"
+		delete = "20m"
+
   }
 }
 
