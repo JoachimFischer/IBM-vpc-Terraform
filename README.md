@@ -22,8 +22,8 @@ After adding the variable values, use the button of Terraform function. At first
 With the  IBM-vpc-Terraform example, you can deploy following architecture:
 1. One VPC in Frankfurt or Dallas
 2. One Address Prefix in Frankfurt02 or Dallas1 data center with *172.21.0.0/21*
-3. One SubNet 	*vpc-space-1-eu-de-1-server*  in Frankfurt02 or Dallas with *172.21.0.0/24*
-4. One VSI in Frankfurt02  	*webapp-eu-de-1*
+3. One SubNet 	*vpc-space-eu-de-1-server*  in Frankfurt or Dallas with *172.21.0.0/24*
+4. One VSI in Frankfurt  	*servername-eu-de-1*
 5. One Floating IP 
 6. One Public Gateway
 7. One VPN Gateway with a VPC IPSec Connection (optional)
