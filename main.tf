@@ -1,15 +1,8 @@
 #---------------------------------------------------------
 # Get resource_group id, the "dafault" will used
 #---------------------------------------------------------
-# data "ibm_resource_group" "group" {
-#   is_default = "true"
-# }
-
-#---------------------------------------------------------
-# Create ressource_group with variable definition
-#---------------------------------------------------------
-resource "ibm_resource_group" "group" {
-  name     = var.resource_group
+data "ibm_resource_group" "group" {
+   is_default = "true"
 }
 
 #---------------------------------------------------------
@@ -24,7 +17,7 @@ data ibm_is_image "select_image" {
 #---------------------------------------------------------
 resource "ibm_is_vpc" "vpc1" {
   name                = var.vpc-name
-  resource_group      = var.resource_group
+  resource_group      = data.ibm_resource_group.group.id
 }
 
 #---------------------------------------------------------
