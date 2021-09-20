@@ -19,7 +19,7 @@ resource "ibm_is_network_acl" "is-vpc-acl" {
     source      = "0.0.0.0/0"
     destination = var.server-subnet-zone-1
     direction   = "inbound"
-    tcp {
+    tcp = {
         port_max = 22
         port_min = 22
       }
