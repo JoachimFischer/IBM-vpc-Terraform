@@ -20,13 +20,13 @@ output "pgw_ip_addresses" {
 # Output of Subnet
 #--------------------------------------
  output "subnet_zone1" {
-   value = ibm_is_subnet.server-subnet-zone1.subnet_cidr
+   value = ibm_is_subnet.server-subnet-zone1
  }
 # output "subnet_zone2" {
-#   value = ibm_is_subnet.server-subnet-zone2.subnet_cidr
+#   value = ibm_is_subnet.server-subnet-zone2
 # }
 # output "subnet_zone3" {
-#   value = ibm_is_subnet.server-subnet-zone3.subnet_cidr
+#   value = ibm_is_subnet.server-subnet-zone3
 # }
 
 
