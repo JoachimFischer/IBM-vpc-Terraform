@@ -30,7 +30,7 @@ With the  IBM-vpc-Terraform example, you can deploy following architecture:
 
 After the infrastructure is deployed you can test it. Logon into the server: ``$ssh root@server-ip``
 
-<img src="https://github.com/JoachimFischer/IBM-vpc-Terraform/blob/master/Image/Terraform-VPC.png" width="500">
+<img src="https://github.com/JoachimFischer/IBM-vpc-Terraform/blob/master/Image/Terraform-VPC.png" width="700">
 
 It is only possible to access the server via SSH. Therefore only port 22 is allowed.
 
