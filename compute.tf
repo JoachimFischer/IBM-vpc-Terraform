@@ -22,14 +22,10 @@ resource "ibm_is_instance" "server-zone1" {
   vpc = ibm_is_vpc.vpc1.id
   zone = var.zone1
   keys = [data.ibm_is_ssh_key.sshkey.id]
-
-  //User can configure timeouts
   timeouts {
-timeouts {
-		create = "20m"
-		update = "20m"
-		delete = "20m"
-
+	create = "20m"
+	update = "20m"
+	delete = "20m"
   }
 }
 
