@@ -128,10 +128,6 @@ variable "server-count" {
   default = 1
 }
 
-variable "ibmcloud_timeout" {
-   default = 3000
-}
-
 #---------------------------------------------------------
 ## Create VPN Connection 
 #---------------------------------------------------------
