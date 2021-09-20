@@ -13,12 +13,12 @@ variable "ssh_keyname" {}
 #---------------------------------------------------------
 variable "vpc-name" {
   description = "Provide the name of your VPC"
-  default = "vpc-space"
+  default = "vpc-space-test"
 }
 
 variable "resource_group" {
   description = "The Ressource Roup must be defined in IBM Cloud IAM"
-  default = "resource-vpc-space"
+  default = "resource-vpc-test-space"
 }
 
 #---------------------------------------------------------
