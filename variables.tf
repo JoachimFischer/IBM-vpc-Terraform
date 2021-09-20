@@ -16,10 +16,10 @@ variable "vpc-name" {
   default = "vpc-space-test"
 }
 
-variable "resource_group" {
-  description = "The Ressource Roup must be defined in IBM Cloud IAM"
-  default = "resource-vpc-test-space"
-}
+# variable "resource_group" {
+#   description = "The Ressource Roup must be defined in IBM Cloud IAM"
+#   default = "resource-vpc-test-space"
+# }
 
 #---------------------------------------------------------
 ## DEFINE Region and Zones in US-South Dallas or
