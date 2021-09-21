@@ -24,6 +24,17 @@ resource "ibm_is_network_acl" "is-vpc-acl" {
         port_min = 22
       }
   }
+  rules {
+    name        = "inbound"
+    action      = "allow"
+    source      = "0.0.0.0/0"
+    destination = var.server-subnet-zone-1
+    direction   = "inbound"
+    icmp {
+        type = 8
+        code = 0
+      }
+  }
 }
 
 resource "ibm_is_subnet_network_acl_attachment" attach {
