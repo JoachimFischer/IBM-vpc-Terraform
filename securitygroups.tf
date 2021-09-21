@@ -22,8 +22,8 @@ resource "ibm_is_security_group_rule" "server-securitygroup-rule-in-tcp" {
   ip_version = "ipv4"
   remote     = "0.0.0.0/0"
   icmp {
-    code = 0
     type = 8
+    code = 0
   }
 }
 
