@@ -41,8 +41,7 @@ resource "ibm_is_network_acl_rule" "is-vpc-acl-out-1" {
         type = 8
         code = 0
       }
-  }
-}
+ }
 
 resource "ibm_is_subnet_network_acl_attachment" attach {
   subnet      = ibm_is_subnet.server-subnet-zone1.id
