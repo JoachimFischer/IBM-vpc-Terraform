@@ -10,7 +10,7 @@ resource "ibm_is_network_acl" "is-vpc-acl" {
 
 resource "ibm_is_network_acl_rule" "is-vpc-acl-out-1" {
  network_acl    = ibm_is_network_acl.is-vpc-acl.id
-    name        = "outbound"
+    name        = "outbound-1"
     action      = "allow"
     source      = "0.0.0.0/0"
     destination = "0.0.0.0/0"
@@ -19,7 +19,7 @@ resource "ibm_is_network_acl_rule" "is-vpc-acl-out-1" {
 
  resource "ibm_is_network_acl_rule" "is-vpc-acl-in-1" {
  network_acl    = ibm_is_network_acl.is-vpc-acl.id
-    name        = "inbound"
+    name        = "inbound-1"
     action      = "allow"
     source      = "0.0.0.0/0"
     destination = var.server-subnet-zone-1
@@ -32,14 +32,14 @@ resource "ibm_is_network_acl_rule" "is-vpc-acl-out-1" {
 
  resource "ibm_is_network_acl_rule" "is-vpc-acl-in-2" {
  network_acl    = ibm_is_network_acl.is-vpc-acl.id
-    name        = "inbound"
+    name        = "inbound-2"
     action      = "allow"
     source      = "0.0.0.0/0"
     destination = var.server-subnet-zone-1
     direction   = "inbound"
     icmp {
         type = 8
-        code = 0
+        code = 1
       }
  }
 
