@@ -39,7 +39,6 @@ resource "ibm_is_network_acl_rule" "is-vpc-acl-out-1" {
     direction   = "inbound"
     icmp {
         type = 8
-        code = 1
       }
  }
 
