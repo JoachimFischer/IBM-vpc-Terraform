@@ -6,14 +6,19 @@
 resource "ibm_is_network_acl" "is-vpc-acl" {
   name = "is-vpc-acl-1"
   vpc  = ibm_is_vpc.vpc1.id
-  rules {
+}
+
+resource "ibm_is_network_acl_rule" "is-vpc-acl-out-1" {
+ network_acl    = ibm_is_network_acl.is-vpc-acl.id
     name        = "outbound"
     action      = "allow"
     source      = "0.0.0.0/0"
     destination = "0.0.0.0/0"
     direction   = "outbound"
   }
-  rules {
+
+ resource "ibm_is_network_acl_rule" "is-vpc-acl-in-1" {
+ network_acl    = ibm_is_network_acl.is-vpc-acl.id
     name        = "inbound"
     action      = "allow"
     source      = "0.0.0.0/0"
@@ -24,7 +29,9 @@ resource "ibm_is_network_acl" "is-vpc-acl" {
         port_min = 22
       }
   }
-  rules {
+
+ resource "ibm_is_network_acl_rule" "is-vpc-acl-in-2" {
+ network_acl    = ibm_is_network_acl.is-vpc-acl.id
     name        = "inbound"
     action      = "allow"
     source      = "0.0.0.0/0"
