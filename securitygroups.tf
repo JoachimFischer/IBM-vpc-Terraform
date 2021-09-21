@@ -15,7 +15,8 @@ resource "ibm_is_security_group_rule" "server-securitygroup-rule-in-tcp" {
       port_min = 22
       port_max = 22
   }
-  
+}
+
   resource "ibm_is_security_group_rule" "server-securitygroup-rule-in-icmp" {
   group      = ibm_is_security_group.server-securitygroup.id
   direction  = "inbound"
@@ -26,7 +27,6 @@ resource "ibm_is_security_group_rule" "server-securitygroup-rule-in-tcp" {
     code = 0
   }
 }
-
 
 resource "ibm_is_security_group_rule" "server-securitygroup-rule-out-all" {
   group      = ibm_is_security_group.server-securitygroup.id
