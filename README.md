@@ -43,7 +43,7 @@ To switch the region to Frankfurt eu-de use following CLI:
 
 The default flavor is: cx2-2x4
 
-It is also possible to get the information of available images out of Cloud CLI with following comand: 
+It is also possible to get the information of available images out of Cloud CLI with following comand:
 ``$ibmcloud is images``   
 
 It is not necessary to install the IBM CLI local, you can use the IBM Cloud Shell out of the Web GUI. If you have logon to the Cloud portal, you find the symbole in the top menue on the right side.
