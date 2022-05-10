@@ -13,7 +13,7 @@ variable "ssh_keyname" {}
 #---------------------------------------------------------
 variable "vpc-name" {
   description = "Provide the name of your VPC"
-  default = "vpc-space-test"
+  default = "vpc-space-1test"
 }
 
 # variable "resource_group" {
