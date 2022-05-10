@@ -15,7 +15,7 @@ data ibm_is_image "select_image" {
 #---------------------------------------------------------
 # Create new VPC
 #---------------------------------------------------------
-resource "ibm_is_vpc" "vpc1" {
+resource "ibm_is_vpc" "vpc1-test" {
   name                = var.vpc-name
   resource_group      = data.ibm_resource_group.group.id
 }
@@ -25,7 +25,7 @@ resource "ibm_is_vpc" "vpc1" {
 #---------------------------------------------------------
 resource "ibm_is_vpc_address_prefix" "prefix-1" {
   name = "zone1-cidr-1"
-  vpc  = ibm_is_vpc.vpc1.id
+  vpc  = ibm_is_vpc.vpc1-test.id
   zone = var.zone1
   cidr = var.vpc-address-prefix-1
 #  is_default  = true
