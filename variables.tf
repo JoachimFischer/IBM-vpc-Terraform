@@ -56,16 +56,16 @@ variable "zone3" {
 #---------------------------------------------------------
 variable "vpc-address-prefix-1" {
   description = "The VPC address prefix"
-  default = "192.21.0.0/24"
+  default = "192.21.0.0/21"
 }
 
 variable "vpc-address-prefix-2" {
   description = "The VPC address prefix"
-  default = "192.21.3.0/24"
+  default = "192.21.3.0/21"
 }
 variable "vpc-address-prefix-3" {
   description = "The VPC address prefix"
-  default = "192.21.6.0/24"
+  default = "192.21.6.0/21"
 }
 
 
