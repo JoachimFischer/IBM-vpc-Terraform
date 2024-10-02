@@ -16,10 +16,10 @@ variable "vpc-name" {
   default = "vpc-space-test"
 }
 
-# variable "resource_group" {
-#   description = "The Ressource Roup must be defined in IBM Cloud IAM"
-#   default = "resource-vpc-test-space"
-# }
+variable "resource_group" {
+  description = "The Ressource Roup must be defined in IBM Cloud IAM"
+  default = "jfi"
+}
 
 #---------------------------------------------------------
 ## DEFINE Region and Zones in US-South Dallas or
@@ -56,16 +56,16 @@ variable "zone3" {
 #---------------------------------------------------------
 variable "vpc-address-prefix-1" {
   description = "The VPC address prefix"
-  default = "172.21.0.0/24"
+  default = "192.21.0.0/24"
 }
 
 variable "vpc-address-prefix-2" {
   description = "The VPC address prefix"
-  default = "172.21.3.0/24"
+  default = "192.21.3.0/24"
 }
 variable "vpc-address-prefix-3" {
   description = "The VPC address prefix"
-  default = "172.21.6.0/24"
+  default = "192.21.6.0/24"
 }
 
 
@@ -73,13 +73,13 @@ variable "vpc-address-prefix-3" {
 ## DEFINE subnets for server in each zone
 #---------------------------------------------------------
 variable "server-subnet-zone-1" {
-  default = "172.21.0.0/24"
+  default = "192.21.0.0/25"
 }
 variable "server-subnet-zone-2" {
-  default = "172.21.3.0/24"
+  default = "192.21.3.0/25"
 }
 variable "server-subnet-zone-3" {
-  default = "172.21.6.0/24"
+  default = "192.21.6.0/25"
 }
 
 #---------------------------------------------------------
