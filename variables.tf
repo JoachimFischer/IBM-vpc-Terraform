@@ -56,16 +56,16 @@ variable "zone3" {
 #---------------------------------------------------------
 variable "vpc-address-prefix-1" {
   description = "The VPC address prefix"
-  default = "192.21.0.0/21"
+  default = "192.168.0.0/24"
 }
 
 variable "vpc-address-prefix-2" {
   description = "The VPC address prefix"
-  default = "192.21.3.0/21"
+  default = "192.168.1.0/24"
 }
 variable "vpc-address-prefix-3" {
   description = "The VPC address prefix"
-  default = "192.21.6.0/21"
+  default = "192.168.2.0/24"
 }
 
 
@@ -73,13 +73,13 @@ variable "vpc-address-prefix-3" {
 ## DEFINE subnets for server in each zone
 #---------------------------------------------------------
 variable "server-subnet-zone-1" {
-  default = "192.21.0.0/25"
+  default = "192.168.0.0/25"
 }
 variable "server-subnet-zone-2" {
-  default = "192.21.3.0/25"
+  default = "192.168.1.0/25"
 }
 variable "server-subnet-zone-3" {
-  default = "192.21.6.0/25"
+  default = "192.168.2.0/25"
 }
 
 #---------------------------------------------------------
